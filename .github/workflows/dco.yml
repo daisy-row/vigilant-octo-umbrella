@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
-      - run: echo "The name of your branch is ${{ github.ref }} and your event is ${{ github.context.event }}."
+      - run: echo "The name of your branch is ${{ github.ref }} and your event is ${{ github.context }}."
       - name: Get PR Commits
         id: 'get-pr-commits'
         uses: tim-actions/get-pr-commits@v1.2.0
